@@ -14,6 +14,7 @@
 		43B8CB1D27BDFB6900383985 /* Old_LockScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB1C27BDFB6900383985 /* Old_LockScreenTests.swift */; };
 		43B8CB2727BDFB6900383985 /* Old_LockScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB2627BDFB6900383985 /* Old_LockScreenUITests.swift */; };
 		43B8CB2927BDFB6900383985 /* Old_LockScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB2827BDFB6900383985 /* Old_LockScreenUITestsLaunchTests.swift */; };
+		43B8CB3B27BE047C00383985 /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB3A27BE047C00383985 /* GetTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		43B8CB2227BDFB6900383985 /* Old LockScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Old LockScreenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B8CB2627BDFB6900383985 /* Old_LockScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old_LockScreenUITests.swift; sourceTree = "<group>"; };
 		43B8CB2827BDFB6900383985 /* Old_LockScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old_LockScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		43B8CB3A27BE047C00383985 /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,10 @@
 		43B8CB0A27BDFB6600383985 /* Old LockScreen */ = {
 			isa = PBXGroup;
 			children = (
+				43B8CB3827BDFD6300383985 /* Views */,
+				43B8CB3527BDFD0300383985 /* Utilities */,
 				43B8CB0B27BDFB6600383985 /* Old_LockScreenApp.swift */,
-				43B8CB0D27BDFB6600383985 /* ContentView.swift */,
+				43B8CB3927BDFF0400383985 /* Screens */,
 				43B8CB0F27BDFB6800383985 /* Assets.xcassets */,
 				43B8CB1127BDFB6800383985 /* Preview Content */,
 			);
@@ -125,6 +129,29 @@
 				43B8CB2827BDFB6900383985 /* Old_LockScreenUITestsLaunchTests.swift */,
 			);
 			path = "Old LockScreenUITests";
+			sourceTree = "<group>";
+		};
+		43B8CB3527BDFD0300383985 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				43B8CB3A27BE047C00383985 /* GetTime.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		43B8CB3827BDFD6300383985 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43B8CB3927BDFF0400383985 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				43B8CB0D27BDFB6600383985 /* ContentView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B8CB3B27BE047C00383985 /* GetTime.swift in Sources */,
 				43B8CB0E27BDFB6600383985 /* ContentView.swift in Sources */,
 				43B8CB0C27BDFB6600383985 /* Old_LockScreenApp.swift in Sources */,
 			);
