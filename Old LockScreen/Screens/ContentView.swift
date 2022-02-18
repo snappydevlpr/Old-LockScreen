@@ -14,29 +14,43 @@ struct ContentView: View {
         ZStack{
             Color("Color_Black")
                 .ignoresSafeArea(.all,edges:.all)
-            VStack{
-                Spacer()
-                
-                //MARK: - HEADER
-                Text(getDate())
-                    .foregroundColor(.white)
-                    .font(.system(size: 100))
-                
-                //MARK: - CENTER
-                Image("earth")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 500, height: 500, alignment: .center)
-                
-                //MARK: - FOOTER
-                ZStack{
-                    Capsule()
-                        .fill(Color.white.opacity(0.20))
-                        .frame(width: buttonWidth, height: 80, alignment: .center)
-  
+            //MARK: - WALLPAPER
+            Image("earth")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 900, height: 900, alignment: .center)
+            
+                VStack{
+                    //MARK: - HEADER
+                    ZStack{
+                        VStack(spacing:0){
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.2))
+                                .frame(width: UIScreen.main.bounds.width, height: 180, alignment: .center)
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.3))
+                                .frame(width: UIScreen.main.bounds.width, height: 145, alignment: .center)
+                        }
+                       
+                        Text(getDate())
+                            .foregroundColor(.white)
+                            .font(.system(size: 100))
+
+                    }
+                    .ignoresSafeArea(.all, edges: .all)
+                    Spacer()
+
+                    //MARK: - FOOTER
+                    ZStack{
+                        Capsule()
+                            .fill(Color.white.opacity(0.20))
+                            .frame(width: buttonWidth, height: 80, alignment: .center)
+                    }
+                    //MARK: - END FOOTER
                 }
-                //MARK: - END FOOTER
-            }
+               
+                
+
             
             
         }
