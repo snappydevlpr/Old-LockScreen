@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80;
+    @State private var notificationWidth: Double = UIScreen.main.bounds.width - 40;
+    @State private var notificationCenterHeight: Double = UIScreen.main.bounds.height - 600;
+    @State private var  buttonOffset: CGFloat = 0;
 
     var body: some View {
         ZStack{
@@ -39,14 +42,43 @@ struct ContentView: View {
                     }
                     .ignoresSafeArea(.all, edges: .all)
                     Spacer()
-
+                    //MARK: - CENTER NOTIFICATIONS
+                    
+                    ZStack{
+                        Rectangle()
+                            .fill(Color.blue)
+                            .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
+                    }
+                    Spacer()
                     //MARK: - FOOTER
                     ZStack{
-                        Capsule()
-                            .fill(Color.white.opacity(0.20))
-                            .frame(width: buttonWidth, height: 80, alignment: .center)
+                         
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 25,style: .continuous)
+                                .fill(Color.black)
+                            HStack{
+                                    RoundedRectangle(cornerRadius: 25,style: .continuous)  .fill(Color.white)
+                                        .frame(width: buttonOffset + 80)
+                                    Spacer()
+     
+                            }
+                            Text("Slide to Unlock")
+                                .foregroundColor(Color.white)
+                                .offset(x:20)
+                                .font(.system(.title3, design: .rounded))
+                            
+                        }
+                        .frame(width: buttonWidth, height: 80, alignment: .center)
                     }
+                    .frame(width: UIScreen.main.bounds.width, height: 200, alignment: .center)
+                    .background(Color.white.opacity(0.20))
+
+
+                   
+
                     //MARK: - END FOOTER
+                    Spacer()
                 }
                
                 
