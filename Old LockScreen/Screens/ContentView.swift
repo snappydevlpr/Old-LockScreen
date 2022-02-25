@@ -12,7 +12,8 @@ struct ContentView: View {
     @State private var notificationWidth: Double = UIScreen.main.bounds.width - 40;
     @State private var notificationCenterHeight: Double = UIScreen.main.bounds.height - 500;
     @State private var  buttonOffset: CGFloat = 0;
-
+    @AppStorage("share") var isLocked: Bool = true;
+    
     //haptic feedback
     let hapticFeedback = UINotificationFeedbackGenerator()
     
@@ -44,8 +45,15 @@ struct ContentView: View {
                         Rectangle()
                             .fill(Color.black.opacity(0.1))
                             .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
+                    
+                        HStack{}
+                        
                     }
+                    
+                    
                     Spacer()
+                    
+                    
                     //MARK: - FOOTER
                     ZStack{
                          // start of slider
@@ -80,6 +88,7 @@ struct ContentView: View {
                                                if buttonOffset > buttonWidth/2{
                                                    hapticFeedback.notificationOccurred(.success)
                                                    buttonOffset = buttonWidth - 95
+                                                   isLocked = false
                                                }
                                                else{
                                                    buttonOffset = 0

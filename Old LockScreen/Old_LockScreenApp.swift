@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct Old_LockScreenApp: App {
+    @AppStorage("share") var isLocked:Bool =  true;
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack{
+                if isLocked{
+                    ContentView()
+                }
+                else{
+                    UnlockedScreenView()
+
+                }
+            }
         }
     }
 }
