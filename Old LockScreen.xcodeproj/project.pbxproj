@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		4392F49627C8847C002F56D2 /* UnlockedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedScreenView.swift; sourceTree = "<group>"; };
+		4392F49827CC13F9002F56D2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		43B8CB0827BDFB6600383985 /* Old LockScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Old LockScreen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B8CB0B27BDFB6600383985 /* Old_LockScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old_LockScreenApp.swift; sourceTree = "<group>"; };
 		43B8CB0D27BDFB6600383985 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		43B8CAFF27BDFB6600383985 = {
 			isa = PBXGroup;
 			children = (
+				4392F49827CC13F9002F56D2 /* README.md */,
 				43B8CB0A27BDFB6600383985 /* Old LockScreen */,
 				43B8CB1B27BDFB6900383985 /* Old LockScreenTests */,
 				43B8CB2527BDFB6900383985 /* Old LockScreenUITests */,
