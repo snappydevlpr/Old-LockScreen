@@ -17,32 +17,51 @@ struct UnlockedScreenView: View {
             Color("Color_Blue")
                 .ignoresSafeArea(.all,edges: .all)
             VStack{
+            
                 Spacer()
+                //MARK: HEADER
                 Text("Old iPhone Lock Screen")
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .fontWeight(.heavy)
                     .padding()
-                Text("Thank you for using the simple proof of concept application.")
-                    .foregroundColor(.white)
-                    .fontWeight(.light)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 20)
+                ZStack{
+                    Text("Thank you for using the simple proof of concept application.")
+                        .foregroundColor(.white)
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 20)
+                        .opacity(isAnimating ? 0:1)
+                    Text("You have locked the application")
+                        .foregroundColor(.white)
+                        .fontWeight(.light)
+                        .padding(.horizontal, 10)
+                        .opacity(isAnimating ? 1:0)
+                }
+               
                 
+                //MARK: CENTER IMAGE
+                ZStack{
+                    Image("unlocked")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .opacity(isAnimating ? 0:1)
+                        .frame(width: 400, height: 400, alignment: .center)
+                    Image("locked")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .opacity(isAnimating ? 1:0)
+                }
                 
-                    
-                Image("unlocked")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200, alignment: .center)
-                   
-                .frame(width: 400, height: 400, alignment: .center)
-
-
+                //MARK: - FOOTER
                 Button(action: { withAnimation{
                     isAnimating = true;
-                    isLocked = true
-                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute:{
+                        isLocked = true;
+                    })
+
                 }},label: {
                     Text("Restart")
                         .fontWeight(.heavy)
@@ -53,16 +72,13 @@ struct UnlockedScreenView: View {
                 })
                 
                 Spacer()
-                
+        
                 Text("Created by Austin Suarez")
                     .foregroundColor(.white)
                     .fontWeight(.ultraLight)
             }
         }
-        
-        
-        
-     
+
     }
 }
 

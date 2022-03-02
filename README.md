@@ -16,5 +16,5 @@ Used haptic feedback I am able to create success and failure for not full onlock
 ## Todo List
 - [x] Create psuedo lock screen 
 - [ ] Create animation for psuedo notifications 
-- [ ] Create content for unlocked screen
-- [ ] Adding animation for unlock screen
+- [x] Create content for unlocked screen
+- [x] Adding animation for unlock screen

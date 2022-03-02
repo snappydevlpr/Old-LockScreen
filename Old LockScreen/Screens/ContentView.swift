@@ -19,14 +19,14 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            Color("Color_Black")
-                .ignoresSafeArea(.all,edges:.all)
-            //MARK: - WALLPAPER
-            Image("earth")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 900, height: 900, alignment: .center)
-            
+                Color("Color_Black")
+                    .ignoresSafeArea(.all,edges:.all)
+                //MARK: - WALLPAPER
+                Image("earth")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 900, height: 900, alignment: .center)
+                
                 VStack{
                     //MARK: - HEADER
                     ZStack{
@@ -35,19 +35,21 @@ struct ContentView: View {
                             .font(.system(size: 100))
                             .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
                             .background(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.5), .black.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
-
                     }
                     .ignoresSafeArea(.all, edges: .all)
+                    
                     Spacer()
+                    
                     //MARK: - CENTER NOTIFICATIONS
-                    
                     ZStack{
-                        Rectangle()
-                            .fill(Color.black.opacity(0.1))
-                            .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
-                    
-                        HStack{}
                         
+                        VStack{
+                            Rectangle()
+                            .frame(width: notificationWidth, height: 100, alignment: .center)
+                            .foregroundColor(.white)
+                        }
+                        .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
+                
                     }
                     
                     
