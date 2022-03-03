@@ -37,20 +37,34 @@ struct ContentView: View {
                             .background(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.5), .black.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
                     }
                     .ignoresSafeArea(.all, edges: .all)
-                    
-                    Spacer()
-                    
+                                        
                     //MARK: - CENTER NOTIFICATIONS
-                    ZStack{
-                        
-                        VStack{
-                            Rectangle()
+
+                    VStack{
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
                             .frame(width: notificationWidth, height: 100, alignment: .center)
-                            .foregroundColor(.white)
+                            .foregroundColor(.gray.opacity(0.8))
+                            .offset(y:-200)
+                            HStack(spacing: 1){
+                                Image("imessage")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 150, height: 150)
+                                Text("Hello")
+                                    
+                            }
+                            .offset(y:-200)
+                            .frame(width: notificationWidth, height: 100,alignment:.leading)
+
+
                         }
-                        .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
-                
+                        
+                       
                     }
+                    .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
+            
+                
                     
                     
                     Spacer()
