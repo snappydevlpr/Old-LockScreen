@@ -29,49 +29,29 @@ struct ContentView: View {
                 
                 VStack{
                     //MARK: - HEADER
-                    ZStack{
-                        Text(getDate())
+                    Text(getDate())
                             .foregroundColor(.white)
                             .font(.system(size: 100))
-                            .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width, height: 200, alignment: .center)
                             .background(LinearGradient(gradient: Gradient(colors: [.white.opacity(0.5), .black.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
-                    }
-                    .ignoresSafeArea(.all, edges: .all)
+                            .ignoresSafeArea(.all, edges: .all)
                                         
                     //MARK: - CENTER NOTIFICATIONS
 
-                    VStack{
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .frame(width: notificationWidth, height: 100, alignment: .center)
-                            .foregroundColor(.gray.opacity(0.8))
-                            .offset(y:-200)
-                            HStack(spacing: 1){
-                                Image("imessage")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 150, height: 150)
-                                Text("Hello")
-                                    
-                            }
-                            .offset(y:-200)
-                            .frame(width: notificationWidth, height: 100,alignment:.leading)
-
-
-                        }
-                        
+                    VStack(alignment:.center){
+                        NotificationView(imageIcon: "person.fill",
+                                         imageSubIcon: "imessage",
+                                         notifcationHeader: "SnappyDevlpr",
+                                         notificationMessage: "Thanks for downloading my app!")
                        
+                        Spacer()
                     }
                     .frame(width: notificationWidth, height: notificationCenterHeight, alignment: .center)
-            
-                
-                    
-                    
                     Spacer()
-                    
                     
                     //MARK: - FOOTER
                     ZStack{
+                    
                          // start of slider
                         ZStack{
                             //slider base background
@@ -127,17 +107,8 @@ struct ContentView: View {
                     }
                     .frame(width: UIScreen.main.bounds.width, height: 200, alignment: .center)
                     .background(Color.white.opacity(0.20))
-
-
-                   
-
                     //MARK: - END FOOTER
-                    Spacer()
                 }
-               
-                
-
-            
             
         }
         

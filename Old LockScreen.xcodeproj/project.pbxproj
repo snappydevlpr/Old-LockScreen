@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4392F49727C8847C002F56D2 /* UnlockedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392F49627C8847C002F56D2 /* UnlockedScreenView.swift */; };
+		4392F49A27D3FDD9002F56D2 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392F49927D3FDD9002F56D2 /* NotificationView.swift */; };
 		43B8CB0C27BDFB6600383985 /* Old_LockScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB0B27BDFB6600383985 /* Old_LockScreenApp.swift */; };
 		43B8CB0E27BDFB6600383985 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B8CB0D27BDFB6600383985 /* ContentView.swift */; };
 		43B8CB1027BDFB6800383985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B8CB0F27BDFB6800383985 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		4392F49627C8847C002F56D2 /* UnlockedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedScreenView.swift; sourceTree = "<group>"; };
 		4392F49827CC13F9002F56D2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4392F49927D3FDD9002F56D2 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		43B8CB0827BDFB6600383985 /* Old LockScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Old LockScreen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B8CB0B27BDFB6600383985 /* Old_LockScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old_LockScreenApp.swift; sourceTree = "<group>"; };
 		43B8CB0D27BDFB6600383985 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		43B8CB3827BDFD6300383985 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4392F49927D3FDD9002F56D2 /* NotificationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				43B8CB0E27BDFB6600383985 /* ContentView.swift in Sources */,
 				43B8CB0C27BDFB6600383985 /* Old_LockScreenApp.swift in Sources */,
 				4392F49727C8847C002F56D2 /* UnlockedScreenView.swift in Sources */,
+				4392F49A27D3FDD9002F56D2 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
