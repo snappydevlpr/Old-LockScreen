@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80;
@@ -16,6 +17,7 @@ struct ContentView: View {
     
     //haptic feedback
     let hapticFeedback = UINotificationFeedbackGenerator()
+    let systemSoundID: SystemSoundID = 1101;
     
     var body: some View {
         ZStack{
@@ -25,7 +27,7 @@ struct ContentView: View {
                 Image("earth")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 900, height: 900, alignment: .center)
+                    .frame(width: 700, height: UIScreen.main.bounds.height, alignment: .center)
                 
                 VStack{
                     //MARK: - HEADER
@@ -84,6 +86,8 @@ struct ContentView: View {
                                                if buttonOffset > buttonWidth/2{
                                                    hapticFeedback.notificationOccurred(.success)
                                                    buttonOffset = buttonWidth - 95
+                                                   AudioServicesPlaySystemSound(systemSoundID)
+
                                                    isLocked = false
                                                }
                                                else{

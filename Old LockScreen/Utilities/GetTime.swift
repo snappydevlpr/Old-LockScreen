@@ -11,7 +11,7 @@ import Foundation
 func getDate()->String{
     let time = Date()
     let timeFormatter = DateFormatter()
-    timeFormatter.dateFormat = "HH:ss";
+    timeFormatter.dateFormat = "K:mm";
     let stringDate = timeFormatter.string(from: time)
     return stringDate
 }

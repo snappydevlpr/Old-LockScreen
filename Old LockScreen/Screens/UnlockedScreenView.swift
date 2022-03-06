@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 struct UnlockedScreenView: View {
     
     @AppStorage("share") var isLocked: Bool = false;
     @State private var isAnimating: Bool = false;
+    let  systemSoundID: SystemSoundID = 1100;
 
     var body: some View {
         ZStack{
@@ -59,6 +60,7 @@ struct UnlockedScreenView: View {
                 Button(action: { withAnimation{
                     isAnimating = true;
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute:{
+                        AudioServicesPlaySystemSound(systemSoundID)
                         isLocked = true;
                     })
 
